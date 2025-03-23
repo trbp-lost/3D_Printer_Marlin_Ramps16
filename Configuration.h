@@ -702,9 +702,9 @@
     #define DEFAULT_Ki_LIST {   1.02,   1.08 } // xxxx
     #define DEFAULT_Kd_LIST { 103.46, 114.00 } // xxxx
   #else
-    #define DEFAULT_Kp  20.53 // xxxx
-    #define DEFAULT_Ki   1.02 // xxxx
-    #define DEFAULT_Kd 103.46 // xxxx
+    #define DEFAULT_Kp  18.91 // xxxx
+    #define DEFAULT_Ki   2.38 // xxxx
+    #define DEFAULT_Kd 37.47 // xxxx
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -795,9 +795,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 75.71 // xxxx
-  #define DEFAULT_bedKi 5.25 // xxxx
-  #define DEFAULT_bedKd 727.77 // xxxx
+  #define DEFAULT_bedKp 111.59 // xxxx
+  #define DEFAULT_bedKi 10.24   // xxxx
+  #define DEFAULT_bedKd 810.55 // xxxx
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -1222,11 +1222,11 @@
  * Endstop "Hit" State
  * Set to the state (HIGH or LOW) that applies to each endstop.
  */
-#define X_MIN_ENDSTOP_HIT_STATE HIGH
+#define X_MIN_ENDSTOP_HIT_STATE LOW // xxxx
 //#define X_MAX_ENDSTOP_HIT_STATE HIGH
-#define Y_MIN_ENDSTOP_HIT_STATE HIGH
+#define Y_MIN_ENDSTOP_HIT_STATE LOW // xxxx
 //#define Y_MAX_ENDSTOP_HIT_STATE HIGH
-#define Z_MIN_ENDSTOP_HIT_STATE HIGH
+#define Z_MIN_ENDSTOP_HIT_STATE LOW // xxxx
 //#define Z_MAX_ENDSTOP_HIT_STATE HIGH
 //#define I_MIN_ENDSTOP_HIT_STATE HIGH
 //#define I_MAX_ENDSTOP_HIT_STATE HIGH
@@ -1401,7 +1401,7 @@
 #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
-//#define USE_PROBE_FOR_Z_HOMING
+#define USE_PROBE_FOR_Z_HOMING // xxxx
 
 /**
  * Z_MIN_PROBE_PIN
@@ -1436,7 +1436,7 @@
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
-//#define FIX_MOUNTED_PROBE
+#define FIX_MOUNTED_PROBE // xxxx
 
 /**
  * Use the nozzle as the probe, as with a conductive
@@ -1634,7 +1634,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 13.5, 16.5, 0 } // xxxx
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -1806,9 +1806,9 @@
 // @section motion
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
-#define INVERT_Y_DIR true //xxxx
-#define INVERT_Z_DIR true //xxxx
+#define INVERT_X_DIR true // xxxx
+#define INVERT_Y_DIR false
+#define INVERT_Z_DIR false // xxxx
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
@@ -2100,7 +2100,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_BILINEAR // xxxx
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
@@ -2330,7 +2330,7 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING // xxxx
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // (mm) X point for Z homing
