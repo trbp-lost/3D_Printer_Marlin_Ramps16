@@ -343,7 +343,7 @@
   /**
    * As described above, except for the bed (M140/M190/M303).
    */
-  #define WATCH_BED_TEMP_PERIOD                60 // (seconds)
+  #define WATCH_BED_TEMP_PERIOD                240 // (seconds) // xxxx
   #define WATCH_BED_TEMP_INCREASE               2 // (°C)
 #endif
 
@@ -4010,7 +4010,7 @@
  *
  * Execute certain G-code commands immediately after power-on.
  */
-#define STARTUP_COMMANDS "M17 Z""M503" // xxxx
+#define STARTUP_COMMANDS "M17 Z\nM503" // xxxx
 
 /**
  * G-code Macros
